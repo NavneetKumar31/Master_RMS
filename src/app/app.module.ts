@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { APP_INITIALIZER, NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   AppComponent,
   AppRoutingModule,
@@ -11,8 +11,9 @@ import {
   RegistrationComponent,
   HomeComponent,
   ErrorPageComponent,
-} from './app-index';
-import { SharedModule } from './shared/modules/shared-modules-index';
+} from "./app-index";
+import { SharedModule } from "./shared/modules/shared-modules-index";
+import { EnvironmentService } from "./shared/services/shared-services-index";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,16 @@ import { SharedModule } from './shared/modules/shared-modules-index';
     BrowserAnimationsModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [
+    EnvironmentService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (_environment: EnvironmentService) => () =>
+        _environment.init(),
+      deps: [EnvironmentService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

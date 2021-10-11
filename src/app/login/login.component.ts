@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { IUser } from '../shared/models/shared-models-index';
-import { RoutingService } from '../shared/services/shared-services-index';
+import {
+  RoutingService,
+  EnvironmentService,
+} from '../shared/services/shared-services-index';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +13,15 @@ import { RoutingService } from '../shared/services/shared-services-index';
 })
 export class LoginComponent implements OnInit {
   loginForm: any;
+  assetsPath: string = '';
 
   constructor(
     private _formBuilder: FormBuilder,
-    private _routing: RoutingService
-  ) {}
+    private _routing: RoutingService,
+    private _environment: EnvironmentService
+  ) {
+    this.assetsPath = _environment.assetsPath;
+  }
 
   ngOnInit(): void {
     this.initializeLoginForm();

@@ -13,17 +13,17 @@
   background-position: center;
 
   .login-wrapper {
-    padding: 100px 200px;
+    padding: 50px 200px;
 
     .login-card {
       margin: 0 auto;
       background: $whiteBG;
       border-radius: 30px;
-      height: 600px;
+      height: 700px;
 
       .content {
         .form-container {
-          padding: 20px 60px;
+          padding: 50px 60px;
 
           .form-header {
             text-align: center;
@@ -72,6 +72,7 @@
 
           .btn-grp {
             margin-top: 40px;
+            text-align: center;
 
             .login-with-btn {
               width: 100%;
@@ -87,12 +88,19 @@
             .google {
               background-color: #3cba54;
             }
+
+            .registration-link {
+              padding: 5px !important;
+              font-size: 20px;
+              color: $brown;
+              text-decoration: none !important;
+            }
           }
         }
 
         .img-container {
           img {
-            height: 600px;
+            height: 700px;
             width: 100%;
             border-top-right-radius: 30px;
             border-bottom-right-radius: 30px;

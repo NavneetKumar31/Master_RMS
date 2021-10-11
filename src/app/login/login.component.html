@@ -79,6 +79,9 @@
                       <i class="fab fa-facebook-square btn-icon-left"></i>
                       LOGIN WITH FACEBOOK
                     </button>
+                    <a routerLink="/registration" class="registration-link">
+                      New User
+                    </a>
                   </div>
                 </section>
               </div>
@@ -89,7 +92,7 @@
             <div class="my-col-wrapper">
               <div class="img-container">
                 <img
-                  src="../../assets/imgs/login_image.jpeg"
+                  [src]="assetsPath + 'imgs/login_image.jpeg'"
                   alt="login image"
                 />
               </div>
