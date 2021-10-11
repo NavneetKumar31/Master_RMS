@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg master-rms-header">
+  <div class="container-fluid header-wrapper">
+    <a class="navbar-brand" href="#"> Master RMS </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            [routerLink]="['/home']"
+            routerLinkActive="nav-link-active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/restaurant']"
+            routerLinkActive="nav-link-active"
+            >Restaurant</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/bar']"
+            routerLinkActive="nav-link-active"
+            >Bar</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/hotel']"
+            routerLinkActive="nav-link-active"
+            >Hotel</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/about-us']"
+            routerLinkActive="nav-link-active"
+            >About Us</a
+          >
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <ng-container *ngIf="isUserLoggedIn; else notLoginTemplate">
+          <button
+            mat-raised-button
+            class="master-rms-btn primary-raised-btn user-btn"
+            [matMenuTriggerFor]="menu"
+          >
+            Admin
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Profile</button>
+            <button mat-menu-item>History</button>
+            <button mat-menu-item>Wallet</button>
+            <button mat-menu-item>Admin Console</button>
+            <button mat-menu-item>Log Out</button>
+          </mat-menu>
+        </ng-container>
+        <ng-template #notLoginTemplate>
+          <button
+            mat-raised-button
+            class="master-rms-btn primary-raised-btn login-btn"
+            (click)="handleRouting('login')"
+          >
+            Login / Register
+          </button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,80 @@
+@import "./global-variables.scss";
+
+// rows & columns
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  .my-col {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+// buttons
+.master-rms-btn {
+  position: relative;
+  outline: none !important;
+  text-transform: uppercase;
+
+  .btn-icon-left {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 18px;
+  }
+}
+
+.primary-stroked-btn {
+  border: 1px solid $brown !important;
+  border-radius: 2px !important;
+  color: $brown;
+}
+
+.primary-raised-btn {
+  background: $brown;
+  color: $white;
+}
+
+.primary-btn {
+  color: $brown;
+}
+
+.secondary-stroked-btn {
+  border: 1px solid $yellow !important;
+  border-radius: 2px !important;
+  color: $black;
+}
+
+.secondary-raised-btn {
+  background: $yellow;
+  color: $black;
+}
+
+.secondary-btn {
+  color: $yellow;
+}
+
+// form controls
+.master-rms-input {
+  font-size: 20px;
+  color: $brown;
+}
+
+.input-full-width {
+  width: 100%;
+
+  mat-label {
+    font-size: 18px;
+    color: $black;
+  }
+}
+
+.master-rms-pwd-input {
+  -webkit-text-security: square;
+}
+
+// cards
+.master-rms-card {
+  box-shadow: $cardShadow;
+}

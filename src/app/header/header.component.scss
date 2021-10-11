@@ -1,0 +1,46 @@
+@import "../../assets/ext_css/global-variables.scss";
+@import "../../assets/ext_css/global-common-styles.scss";
+
+.master-rms-header {
+  background: $whiteBG;
+  padding: 10px 20px;
+  box-shadow: $cardShadow;
+  border: 1px solid $brown;
+
+  .header-wrapper {
+    .navbar-brand {
+      font-size: 32px;
+      color: $black;
+    }
+
+    .navbar-toggler {
+      .navbar-toggler-icon {
+        color: $black;
+      }
+    }
+
+    .navbar-collapse {
+      .navbar-nav {
+        padding-left: 5rem;
+
+        .nav-item {
+          padding: 2px 10px !important;
+
+          .nav-link {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $brown;
+          }
+
+          .nav-link-active {
+            color: $black;
+            border-bottom: 2px solid $black;
+          }
+        }
+      }
+
+      .user-btn {
+      }
+    }
+  }
+}

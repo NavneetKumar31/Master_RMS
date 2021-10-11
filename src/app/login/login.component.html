@@ -1,0 +1,102 @@
+<div class="login-container">
+  <div class="login-wrapper">
+    <section class="login-card master-rms-card">
+      <section class="content">
+        <div class="row">
+          <div class="col-6 my-col">
+            <div class="my-col-wrapper">
+              <div class="form-container">
+                <section class="form-header">
+                  <img
+                    src="../../assets/logos/Master_RMS.jpeg"
+                    alt="Master RMS logo"
+                    class="avatar-img"
+                  />
+                  <p class="title">Master RMS</p>
+                  <p class="subtitle">Make your journey with us...</p>
+                </section>
+                <section class="form-content">
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <mat-form-field
+                      class="input-full-width"
+                      appearance="outline"
+                    >
+                      <mat-label>Username</mat-label>
+                      <input
+                        matInput
+                        class="master-rms-input"
+                        formControlName="username"
+                      />
+                    </mat-form-field>
+
+                    <mat-form-field
+                      class="input-full-width"
+                      appearance="outline"
+                    >
+                      <mat-label>Password</mat-label>
+                      <input
+                        matInput
+                        class="master-rms-pwd-input master-rms-input"
+                        formControlName="password"
+                      />
+                    </mat-form-field>
+
+                    <div class="form-btn-grp">
+                      <a class="forgot-pwd" routerLink="/">
+                        Forgot password?
+                      </a>
+
+                      <button
+                        mat-raised-button
+                        class="master-rms-btn primary-raised-btn login-btn"
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </form>
+                  <div class="btn-grp">
+                    <button
+                      mat-raised-button
+                      class="
+                        master-rms-btn
+                        primary-raised-btn
+                        google
+                        login-with-btn
+                      "
+                    >
+                      <i class="fab fa-google btn-icon-left"></i>
+                      LOGIN WITH GOOGLE
+                    </button>
+                    <button
+                      mat-raised-button
+                      class="
+                        master-rms-btn
+                        primary-raised-btn
+                        facebook
+                        login-with-btn
+                      "
+                    >
+                      <i class="fab fa-facebook-square btn-icon-left"></i>
+                      LOGIN WITH FACEBOOK
+                    </button>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 my-col">
+            <div class="my-col-wrapper">
+              <div class="img-container">
+                <img
+                  src="../../assets/imgs/login_image.jpeg"
+                  alt="login image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</div>

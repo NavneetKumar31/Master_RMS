@@ -1,0 +1,104 @@
+@import "../../assets/ext_css/global-variables.scss";
+@import "../../assets/ext_css/global-common-styles.scss";
+
+.login-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  background: url("../../assets/imgs/main_body_bg.jpeg") 0% 0% no-repeat
+    padding-box;
+  background-size: cover;
+  background-position: center;
+
+  .login-wrapper {
+    padding: 100px 200px;
+
+    .login-card {
+      margin: 0 auto;
+      background: $whiteBG;
+      border-radius: 30px;
+      height: 600px;
+
+      .content {
+        .form-container {
+          padding: 20px 60px;
+
+          .form-header {
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+
+            p {
+              padding: 0 !important;
+              margin: 0 !important;
+            }
+
+            .avatar-img {
+              height: 120px;
+              width: 120px;
+              border: 1px solid $brown;
+              border-radius: 50%;
+              box-shadow: $cardShadow;
+              margin-bottom: 0.5rem;
+            }
+
+            .title {
+              font-size: 28px;
+              font-weight: 500;
+            }
+
+            .subtitle {
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+
+          .form-content {
+            padding: 10px 20px;
+
+            .form-btn-grp {
+              position: relative;
+
+              .login-btn {
+                float: right;
+                height: 50px;
+                width: 120px;
+                font-size: 18px;
+              }
+            }
+          }
+
+          .btn-grp {
+            margin-top: 40px;
+
+            .login-with-btn {
+              width: 100%;
+              height: 40px;
+              margin: 5px auto;
+              font-size: 16px;
+            }
+
+            .facebook {
+              background-color: #3b5998;
+            }
+
+            .google {
+              background-color: #3cba54;
+            }
+          }
+        }
+
+        .img-container {
+          img {
+            height: 600px;
+            width: 100%;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+          }
+        }
+      }
+    }
+  }
+}

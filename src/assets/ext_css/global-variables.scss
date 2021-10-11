@@ -1,0 +1,15 @@
+// matte colors
+$white: #fdfbf9;
+$black: #171717;
+$yellow: #edd94c;
+$brown: #533621;
+
+// backgrounds
+$whiteBG: $white 0% 0% no-repeat padding-box;
+$blackBG: $black 0% 0% no-repeat padding-box;
+$yellowBG: $yellow 0% 0% no-repeat padding-box;
+$brownBG: $brown 0% 0% no-repeat padding-box;
+
+// box-shadows
+$cardShadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+  0 1px 3px 0 rgb(0 0 0 / 12%);
