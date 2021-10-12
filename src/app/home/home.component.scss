@@ -1,0 +1,131 @@
+@import "../../assets/ext_css/global-variables.scss";
+@import "../../assets/ext_css/global-common-styles.scss";
+
+.app-home-container {
+  .app-home-wrapper {
+    .banner-container {
+      figure {
+        position: relative;
+        margin: 0 !important;
+
+        img {
+          height: 380px;
+          width: 100%;
+        }
+
+        figcaption {
+          position: absolute;
+          bottom: 1rem;
+          left: 0;
+          width: 100%;
+
+          .banner-description {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 20px;
+            color: invert($color: $brown);
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .panel-container {
+      padding: 20px;
+
+      .title {
+        width: fit-content;
+        padding: 5px 0;
+        font-size: 24px;
+        font-weight: 500;
+        color: $black;
+        text-align: left;
+        border-bottom: 1px solid $black;
+      }
+
+      .panel-card {
+        margin: 0 5px;
+        padding: 10px;
+        background: $whiteBG;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+        .content {
+          padding: 10px !important;
+          margin: 0 !important;
+          text-align: justify;
+        }
+      }
+    }
+
+    .security-info-container {
+      background: $brownBG;
+
+      .title {
+        color: $white !important;
+        border-bottom: 1px solid $white;
+      }
+
+      .safety-card {
+        height: 180px;
+
+        .title {
+          font-size: 18px;
+          text-align: center;
+          color: $brown !important;
+          padding-bottom: 5px;
+          margin: 0 !important;
+          border-bottom: 1px solid $brown;
+
+          .fas {
+            font-size: 42px !important;
+            vertical-align: middle;
+            margin-right: 10px;
+          }
+        }
+
+        .content {
+          padding: 10px 0 !important;
+        }
+      }
+    }
+
+    .brands-container {
+      .brand-card {
+        margin: 0 5px;
+        padding: 0 !important;
+        background: $whiteBG;
+        height: 380px;
+
+        figure {
+          position: relative;
+          margin: 0 !important;
+
+          img {
+            height: 280px;
+            width: 100%;
+            border-top-right-radius: 20px;
+          }
+
+          figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            .title {
+              width: 100%;
+              padding: 20px !important;
+              margin: 0 !important;
+              font-size: 28px;
+              font-weight: 500;
+              font-style: italic;
+              text-align: center;
+              background: #eeeeeeab 0% 0% no-repeat padding-box;
+            }
+          }
+        }
+      }
+    }
+  }
+}

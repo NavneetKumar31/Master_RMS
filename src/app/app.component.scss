@@ -1,0 +1,19 @@
+.app-container {
+  height: 100% !important;
+  position: relative;
+
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .app-router {
+    margin-top: 65px;
+    background: url("../assets/imgs/main_BG.jpeg") 0% 0% no-repeat padding-box;
+    background-position: center;
+    background-size: cover;
+  }
+}

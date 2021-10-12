@@ -3,12 +3,12 @@
     <section class="login-card master-rms-card">
       <section class="content">
         <div class="row">
-          <div class="col-6 my-col">
-            <div class="my-col-wrapper">
+          <div class="col-6 master-rms-col">
+            <div class="master-rms-col-wrapper">
               <div class="form-container">
                 <section class="form-header">
                   <img
-                    src="../../assets/logos/Master_RMS.jpeg"
+                    [src]="assetsPath + 'logos/Master_RMS.jpeg'"
                     alt="Master RMS logo"
                     class="avatar-img"
                   />
@@ -79,17 +79,20 @@
                       <i class="fab fa-facebook-square btn-icon-left"></i>
                       LOGIN WITH FACEBOOK
                     </button>
-                    <a routerLink="/registration" class="registration-link">
-                      New User
-                    </a>
+                    <p class="registration-panel">
+                      If you are new user then click on
+                      <a routerLink="/registration" class="registration-link">
+                        register
+                      </a>
+                    </p>
                   </div>
                 </section>
               </div>
             </div>
           </div>
 
-          <div class="col-6 my-col">
-            <div class="my-col-wrapper">
+          <div class="col-6 master-rms-col">
+            <div class="master-rms-col-wrapper">
               <div class="img-container">
                 <img
                   [src]="assetsPath + 'imgs/login_image.jpeg'"
