@@ -1,0 +1,152 @@
+@import "../../../assets/ext_css/global-variables.scss";
+@import "../../../assets/ext_css/global-common-styles.scss";
+
+.restaurant-menu-container {
+  .restaurant-menu-wrapper {
+    .page-header {
+      .filter-panel {
+        position: relative;
+        height: 50px;
+        background: $whiteBG;
+
+        .right {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 15px;
+
+          .text {
+            font-size: 15px;
+            padding: 10px;
+            border-left: 1px solid $brown;
+          }
+
+          mat-radio-group {
+            margin-right: 10px;
+
+            mat-radio-button {
+              margin: 0 10px;
+            }
+          }
+
+          mat-checkbox {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+
+    .page-content {
+      padding: 10px 20px;
+
+      .dish-card {
+        position: relative;
+        background: $whiteBG;
+        border-radius: 5px;
+        box-shadow: $cardShadow;
+        padding: 20px;
+        margin: 5px;
+        height: 320px;
+        z-index: 1;
+
+        .info-panel,
+        .img-panel {
+          position: absolute;
+        }
+
+        .info-panel {
+          top: 20px;
+          left: 20px;
+          width: 50%;
+
+          p {
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+
+          .ingredients {
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            margin: 15px 0 0;
+            text-transform: uppercase;
+            color: #aaa;
+
+            .dish-type {
+              display: inline-block;
+              height: 15px;
+              width: 15px;
+              border-radius: 50%;
+              vertical-align: middle;
+            }
+
+            .veg {
+              background-color: green;
+            }
+
+            .non-veg {
+              background-color: red;
+            }
+
+            .text {
+              margin-left: 5px;
+              vertical-align: middle;
+            }
+          }
+
+          .title {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 30px;
+            margin: 15px 0 !important;
+            color: $brown;
+          }
+
+          .description {
+            font-size: 15px;
+            color: #aaa;
+            text-align: justify;
+
+            // restrict height of paragraph
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 6; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            height: 120px;
+          }
+
+          .price {
+            font-size: 24px;
+            letter-spacing: 3px;
+            color: $brown;
+
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid $brown;
+            line-height: 0.1em;
+            margin: 20px 0 20px !important;
+
+            span {
+              background: #fff;
+              padding: 0 10px;
+            }
+          }
+        }
+
+        .img-panel {
+          top: 20px;
+          right: 20px;
+        }
+
+        .action-bar {
+          position: absolute;
+          bottom: 15px;
+          left: 20px;
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

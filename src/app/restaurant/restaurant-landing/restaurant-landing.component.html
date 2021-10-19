@@ -1,1 +1,19 @@
-<p>restaurant-landing works!</p>
+<mat-drawer-container class="master-rms-drawer-container">
+  <mat-drawer class="master-rms-sidenav sidenav-sm" mode="side" opened>
+    <ul class="nav-list">
+      <ng-container *ngFor="let nav of navList">
+        <li
+          class="nav-list-item"
+          [routerLink]="[nav?.link]"
+          routerLinkActive="nav-list-item-active"
+        >
+          {{ nav?.title }}
+        </li>
+      </ng-container>
+    </ul>
+  </mat-drawer>
+
+  <div class="master-rms-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

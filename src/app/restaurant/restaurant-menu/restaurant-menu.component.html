@@ -1,1 +1,93 @@
-<p>restaurant-menu works!</p>
+<div class="restaurant-menu-container">
+  <div class="restaurant-menu-wrapper">
+    <section class="page-header">
+      <section class="filter-panel">
+        <div class="right">
+          <form [formGroup]="filterForm">
+            <span class="text">Types:</span>
+            <mat-radio-group
+              aria-label="Select food type"
+              formControlName="selectedDishType"
+            >
+              <ng-container *ngFor="let type of types">
+                <mat-radio-button [value]="type">{{
+                  type | titlecase
+                }}</mat-radio-button>
+              </ng-container>
+            </mat-radio-group>
+
+            <mat-radio-group
+              arial-label="Select food category"
+              formControlName="selectedDishCategory"
+            >
+              <span class="text">Categories:</span>
+              <ng-container *ngFor="let category of categories">
+                <mat-radio-button [value]="category">{{
+                  category | titlecase
+                }}</mat-radio-button>
+              </ng-container>
+            </mat-radio-group>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <section class="page-content">
+      <!-- all dishes tab -->
+      <ng-template [ngIf]="filteredDishes.length > 0">
+        <div class="tab-container">
+          <div class="row">
+            <ng-container
+              *ngFor="
+                let dish of filteredDishes;
+                let i = index;
+                trackBy: trackByFn
+              "
+            >
+              <div class="col-6 master-rms-col">
+                <div class="master-rms-col-wrapper">
+                  <div class="dish-card">
+                    <section class="info-panel">
+                      <p class="ingredients">
+                        <span
+                          class="dish-type"
+                          [ngClass]="{
+                            veg: dish?.type === 'veg',
+                            'non-veg': dish?.type === 'non-veg'
+                          }"
+                        ></span>
+                        <span class="text">
+                          {{ dish?.ingredients }}
+                        </span>
+                      </p>
+                      <p class="title">
+                        {{ dish?.name }}
+                      </p>
+                      <p class="description">
+                        {{ dish?.description }}
+                      </p>
+                      <p class="price">
+                        <span>{{ dish?.price }}</span>
+                      </p>
+                    </section>
+                    <section class="img-panel">
+                      <img [src]="dish?.image" [alt]="dish?.name" />
+                    </section>
+                    <div class="action-bar">
+                      <button
+                        mat-raised-button
+                        class="master-rms-btn primary-raised-btn"
+                      >
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </ng-template>
+    </section>
+  </div>
+</div>

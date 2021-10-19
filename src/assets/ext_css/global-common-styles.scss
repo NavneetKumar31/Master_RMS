@@ -21,6 +21,8 @@
   position: relative;
   outline: none !important;
   text-transform: uppercase;
+  border-radius: 5x;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 
   .btn-icon-left {
     position: absolute;
@@ -39,6 +41,15 @@
 .primary-raised-btn {
   background: $brown;
   color: $white;
+
+  &:hover {
+    background: $brownBG;
+    background: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 1) 0%,
+      rgba(252, 70, 107, 1) 100%
+    );
+  }
 }
 
 .primary-btn {
@@ -82,4 +93,59 @@
 // cards
 .master-rms-card {
   box-shadow: $cardShadow;
+}
+
+// sidenav drawer
+.master-rms-drawer-container {
+  height: 100% !important;
+  background: transparent;
+
+  .master-rms-sidenav {
+    height: 100%;
+    box-shadow: $cardShadow;
+
+    .nav-list {
+      list-style: none;
+      padding: 0 !important;
+      margin: 0 !important;
+      background: $whiteBG;
+
+      .nav-list-item {
+        cursor: pointer;
+        padding: 5px 15px !important;
+        margin: 0 !important;
+        border-bottom: 1px solid $brown;
+        font-size: 14px;
+        text-align: center;
+
+        &:hover {
+          color: $white;
+          background: rgb(63, 94, 251);
+          background: radial-gradient(
+            circle,
+            rgba(63, 94, 251, 1) 0%,
+            rgba(252, 70, 107, 1) 100%
+          );
+        }
+      }
+
+      .nav-list-item-active {
+        color: $white;
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+      }
+    }
+  }
+
+  .sidenav-sm {
+    width: 180px;
+  }
+
+  .master-rms-sidenav-content {
+    height: 100%;
+  }
 }

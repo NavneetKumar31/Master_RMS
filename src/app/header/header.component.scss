@@ -5,7 +5,7 @@
   background: $whiteBG;
   padding: 10px 20px;
   box-shadow: $cardShadow;
-  border: 1px solid $brown;
+  border-bottom: 1px solid $brown;
 
   .header-wrapper {
     .navbar-brand {
@@ -29,12 +29,17 @@
           .nav-link {
             font-size: 14px;
             text-transform: uppercase;
-            color: $brown;
+            color: #c1c1c1;
+
+            &:hover {
+              color: $brown;
+              border-bottom: 2px solid $brown;
+            }
           }
 
           .nav-link-active {
-            color: $black;
-            border-bottom: 2px solid $black;
+            color: $brown;
+            border-bottom: 2px solid $brown;
           }
         }
       }

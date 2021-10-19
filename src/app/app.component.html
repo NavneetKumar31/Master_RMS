@@ -1,9 +1,18 @@
 <div class="app-container">
-  <header class="app-header">
-    <app-header></app-header>
-  </header>
-  <section class="app-router">
+  <ng-template [ngIf]="!isLoginOrRegister">
+    <header class="app-header">
+      <app-header></app-header>
+    </header>
+  </ng-template>
+
+  <section
+    class="app-router"
+    [ngStyle]="{ 'margin-top': isLoginOrRegister ? '0px' : '65px' }"
+  >
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
+
+    <ng-template [ngIf]="!isLoginOrRegister">
+      <app-footer></app-footer>
+    </ng-template>
   </section>
 </div>
